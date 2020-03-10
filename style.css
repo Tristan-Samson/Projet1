@@ -1,0 +1,29 @@
+.bio-image-link{
+    width: 300px;
+    height: 300px;
+}
+.bio-image-wrapper {
+    transform: scale(.84) translateX(15%) rotateZ(calc(-1 * (11 * 1deg)));
+    padding: 20.7px;
+}
+
+.bio-image {
+    box-sizing: border-box;
+}
+
+span {
+    display: inline-block;
+    padding: 0 .6em;
+    background-color:
+        #fff;
+    position: relative;
+    top: .1em;
+}
+h4 {
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    line-height: 12.6px;
+    position: static;
+    z-index: auto;
+}
