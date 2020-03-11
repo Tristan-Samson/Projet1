@@ -127,3 +127,65 @@ header a:visited{
     background-color: white;
     z-index: 1;
 }
+
+.event_top{
+    background-color: #d33a2c;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.event_button{
+    background-color: white;
+    color: #006fc6;
+    border-radius: 10px;
+    width: auto;
+    height: 4em;
+}
+
+.current_events{
+    padding: 2% 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+}
+
+.flag_icon{
+    width: 1em;
+}
+
+.event_article1{
+    background: linear-gradient(#208cc8, #1f68a8);
+    border-radius: 10px;
+}
+
+.event_article2{
+    background: linear-gradient(#e85e38, #831e15);
+    border-radius: 10px;
+}
+
+.event_article3{
+    background: linear-gradient(#009245, #87c33f);
+    border-radius: 10px;
+}
+
+.conference_like{
+    background-color: #282634;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.video_event{
+    grid-column: span 2;
+    width: 100%;
+}
+
+.boss_img{
+    width: 40%;
+    grid-column: 1;
+}
