@@ -1,0 +1,72 @@
+/* Person of the week */
+
+.bio-image-link{
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+.bio-image {
+    box-sizing: border-box;
+}
+/* Article community */
+.l-community-hightlights{
+    flex-basis: 100%;
+    box-sizing: border-box;
+}
+.article-post{
+    padding-left: 0;
+    padding-top: 1.5em;
+}
+.article-post_author-name:visited{
+    color: gray;
+}
+span {
+    display: inline-block;
+    padding: 0 .6em;
+    position: relative;
+    top: .1em;
+    font-weight: bold;
+}
+h4 {
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    line-height: 12.6px;
+    position: static;
+    z-index: auto;
+}
+.bio-image-image{
+    width: 100%;
+}
+p {
+    margin: calc(1em + .5vw) 0;
+}
+/* Twitter */
+
+.twitter{
+    text-align: center;
+    text-decoration: underline #d33a2c;
+    padding-bottom: 10%;
+}
+
+.twitter_link:hover{
+    text-align: center;
+    text-decoration: underline #d33a2c;
+    padding-bottom: 10%;
+}
+
+/* Design Systems */
+
+.design_book{
+    background-color: #d33a2c;
+    padding: 10%;
+}
+
+.book_design_book {
+    width: 40%;
+    padding-bottom: 5%;
+}
+.design_book_container{
+    display: flex;
+    justify-content: center;
+}
