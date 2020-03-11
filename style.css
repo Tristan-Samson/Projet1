@@ -1,0 +1,171 @@
+/* Rotations et trnsalations des éléments */
+
+.rotate {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: rotate(-11deg) translate(0%, -19.08%);
+}
+
+.parallaxe:hover {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform:translate(0%, 0%);
+}
+
+.parallaxe {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform:translate(0%, -19.08%);
+}
+
+.rotate:hover {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: rotate(0deg) translate(0%, 0%);
+}
+
+.rotate_menu {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: rotate(180deg)
+}
+
+.rotate_menu:hover {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: rotate(0deg) translate(0%, 0%);
+}
+
+.zoom {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: scale(1);
+}
+
+.zoom:hover {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: scale(1.2, 1.2);
+}
+
+
+/* Changement de couleur des textes */
+
+.text_wtn {
+    transition-duration: 0.2s;
+    color: white;
+}
+
+.text_wtn:hover {
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.text_ntw {
+    transition-duration: 0.2s;
+    color: black;
+}
+
+.text_ntw:hover {
+    color: white;
+    transition-duration: 0.2s;
+}
+
+
+.text_ntr {
+    transition-duration: 0.2s;
+    color: black;
+}
+
+.text_ntr:hover {
+    color: red;
+    transition-duration: 0.2s;
+}
+
+.text_rtn {
+    transition-duration: 0.2s;
+    color: red;
+}
+
+.text_rtn:hover {
+    color: black;
+    transition-duration: 0.2s;
+}
+
+
+.text_wtr {
+    transition-duration: 0.2s;
+    color: white;
+}
+
+.text_wtr:hover {
+    color: red;
+    transition-duration: 0.2s;
+}
+
+.text_rtw {
+    transition-duration: 0.2s;
+    color: red;
+}
+
+.text_rtw:hover {
+    color: white;
+    transition-duration: 0.2s;
+}
+
+
+.text_btr {
+    transition-duration: 0.2s;
+    color: blue;
+}
+
+.text_btr:hover {
+    color: red;
+    transition-duration: 0.2s;
+}
+
+
+/* Changement de couleur des fonds */
+
+.bg_btw {
+    transition-duration: 0.2s;
+    background-color: blue;
+}
+
+.bg_btw:hover {
+    background-color: white;
+    transition-duration: 0.2s;
+}
+
+
+.bg_rtw {
+    transition-duration: 0.2s;
+    background-color: red;
+}
+
+.bg_rtw:hover {
+    background-color: white;
+    transition-duration: 0.2s;
+}
+
+/* Changements d'opacité */
+
+.opacity_top {
+    transition-duration: 0.2s;
+    opacity: 0.7;
+}
+
+.opacity_top:hover {
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+.shadow_opacity {
+    transition-duration: 0.2s;
+    opacity: 1;
+}
+
+.shadow_opacity:hover {
+    opacity: 0;
+    transition-duration: 0.2s;
+}
