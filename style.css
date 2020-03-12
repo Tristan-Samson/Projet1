@@ -252,6 +252,25 @@ header a:visited{
     align-self: center;
 }
 
+
+.top-articles_container{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    background-color: #d33a2c;
+    color: white;
+    padding: 5%;
+}
+
+.articles_container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.reading_info{
+    justify-self: center;
+    align-self: center;
+}
+
 /* Rotations et trnsalations des éléments */
 
 .rotate {
