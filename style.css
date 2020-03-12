@@ -134,6 +134,10 @@ header a:visited{
 .baristacat{
     width: 40%;
 }
+.centering{
+    justify-self: center;
+    align-self: center;
+}
 
 .ethical{
     background-color: #76d0a4;
