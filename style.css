@@ -295,3 +295,42 @@ header a:visited{
     transition-duration: 0.2s;
     z-index: -1;
 }
+
+#hidden_cat{
+    display: inline;
+    float: left;
+    height: 10%;
+    width: 10%;
+}
+
+@media screen and (min-width: 992px) {
+    #hidden_cat{
+        display: none;
+    }
+}
+
+.single_article{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.bio_article{
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+#article_title{
+    grid-column: span 2;
+}
+
+#hidden_cat{
+    display: inline;
+    float: left;
+    width: 30%;
+    height: 6em;
+}
+
+@media screen and (min-width: 992px) {
+    #hidden_cat{
+        display: none;
+    }
