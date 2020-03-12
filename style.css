@@ -2,6 +2,15 @@
     font-family: "Source sans pro", Verdana, sans-serif;
     
 }
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: inherit;
+}
+
 header{
     background-color: #d33a2c;
     color: white;
@@ -101,13 +110,19 @@ header a:visited{
     width: 20px;
 }
 
+.article_button{
+    color: blue;
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+}
+
 .latest_articles_container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     width: 100%;
     background-color: #f6f3f2;
-
 }
 
 .smashing_members{
@@ -156,6 +171,14 @@ header a:visited{
     height: 4em;
 }
 
+.social_link{
+    text-align: center;
+}
+
+.social_link:visited{
+    color: white;
+}
+
 .current_events{
     padding: 2% 5%;
     display: grid;
@@ -200,6 +223,11 @@ header a:visited{
     grid-column: 1;
 }
 
+.event_large_pic{
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+}
 
 /* Rotations et trnsalations des éléments */
 
