@@ -134,6 +134,10 @@ header a:visited{
 .baristacat{
     width: 40%;
 }
+.centering{
+    justify-self: center;
+    align-self: center;
+}
 
 .ethical{
     background-color: #76d0a4;
@@ -156,11 +160,13 @@ header a:visited{
 .event_top{
     background-color: #d33a2c;
     display: grid;
+    grid-column-gap: 5%;
+    padding: 5%;
     grid-template-columns: 3fr 1fr;
     justify-content: center;
     align-items: center;
     color: white;
-    
+        
 }
 
 .event_button{
