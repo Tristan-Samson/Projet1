@@ -1,6 +1,5 @@
 *{
-    font-family: "Source sans pro", Verdana, sans-serif;
-    
+    font-family: "Source sans pro", Verdana, sans-serif;    
 }
 
 a{
@@ -16,6 +15,23 @@ header{
     color: white;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+}
+.white_label{
+    background-color: white;
+    z-index: 10;
+    padding: 5px;
+    box-shadow: 7px 7px rgba(3, 3, 3, 0.3);
+}
+
+
+.main_title{
+    text-align: center;
+    background-color: #d33a2c;
+    box-sizing: border-box;
+    border: 0px;
+    margin: 0px;
+    height: 2em;
+    ;
 }
 
 .header_icon{
@@ -88,6 +104,7 @@ header a:visited{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 100%;
+    color: white;
 }
 
 .article1{
