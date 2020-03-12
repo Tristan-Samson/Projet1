@@ -271,6 +271,16 @@ header a:visited{
     align-self: center;
 }
 
+.rotated_images{
+    rotate: -11deg;
+    background-color: #e63d31;
+    border-radius: 5px;
+    font-size: 2em;
+    color: white;
+    box-sizing: border-box;
+    width: max-content;
+}
+
 /* Rotations et trnsalations des éléments */
 
 .rotate {
