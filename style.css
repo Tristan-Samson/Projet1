@@ -9,6 +9,12 @@ header{
 .header_icon{
     width: 40px;
 }
+#hidden_menu {
+    display: grid;
+    grid-column: 2;
+    width: 100%;
+    justify-content: center;
+}
 
 .list_header{
     display: flex;
@@ -118,7 +124,7 @@ header a:visited{
     -webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .article_zoom:hover{
@@ -126,4 +132,167 @@ header a:visited{
     transform: scale(1.3);
     background-color: white;
     z-index: 1;
+}
+
+
+/* Rotations et trnsalations des éléments */
+
+.rotate {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: rotate(-11deg);
+    transform-origin: bottom left;
+}
+
+.parallaxe:hover {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform:translate(0%, 0%);
+}
+
+.parallaxe {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform:translate(0%, -19.08%);
+}
+
+.rotate:hover {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: rotate(0deg);
+}
+
+.rotate_menu {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: rotate(180deg)
+}
+
+.rotate_menu:hover {
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transform: rotate(0deg) translate(0%, 0%);
+}
+
+/* Changement de couleur des textes */
+
+.text_wtvdr {
+    transition-duration: 0.2s;
+    color: white;
+}
+
+.text_wtvdr:hover {
+    color: #3d0c09;
+    transition-duration: 0.2s;
+}
+
+.text_wtdr {
+    transition-duration: 0.2s;
+    color: white;
+}
+
+.text_wtdr:hover {
+    color: #61140f;
+    transition-duration: 0.2s;
+}
+
+
+.text_gtr {
+    transition-duration: 0.2s;
+    color: #333333;
+}
+
+.text_gtr:hover {
+    color: #d33a2c;
+    transition-duration: 0.2s;
+}
+
+.text_rtg {
+    transition-duration: 0.2s;
+    color: #d33a2c;
+}
+
+.text_rtg:hover {
+    color: #333333;
+    transition-duration: 0.2s;
+}
+
+
+.text_wtr {
+    transition-duration: 0.2s;
+    color: white;
+}
+
+.text_wtr:hover {
+    color: #d33a2c;
+    transition-duration: 0.2s;
+}
+
+.text_rtw {
+    transition-duration: 0.2s;
+    color: #d33a2c;
+}
+
+.text_rtw:hover {
+    color: white;
+    transition-duration: 0.2s;
+}
+
+
+.text_btr {
+    transition-duration: 0.2s;
+    color: #267dd7;
+}
+
+.text_btr:hover {
+    color: #d33a2c;
+    transition-duration: 0.2s;
+}
+
+
+/* Changement de couleur des fonds */
+
+.bg_btw {
+    transition-duration: 0.2s;
+    background-color: #267dd7;
+}
+
+.bg_btw:hover {
+    background-color: white;
+    transition-duration: 0.2s;
+}
+
+
+.bg_rtw {
+    transition-duration: 0.2s;
+    background-color: #d33a2c;
+}
+
+.bg_rtw:hover {
+    background-color: white;
+    transition-duration: 0.2s;
+}
+
+/* Changements d'opacité */
+
+.opacity_top {
+    transition-duration: 0.2s;
+    opacity: 0.7;
+}
+
+.opacity_top:hover {
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+.shadow{
+    transition-duration: 0.2s;
+    opacity: 1;
+    z-index: -1;
+}
+
+.shadow:hover {
+    opacity: 0;
+    transition-duration: 0.2s;
+    z-index: -1;
 }
