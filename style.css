@@ -1,4 +1,7 @@
-
+*{
+    font-family: "Source sans pro", Verdana, sans-serif;
+    
+}
 header{
     background-color: #d33a2c;
     color: white;
