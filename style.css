@@ -15,13 +15,13 @@ header{
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
 }
+
 .white_label{
     background-color: white;
     z-index: 10;
     padding: 5px;
     box-shadow: 7px 7px rgba(3, 3, 3, 0.3);
 }
-
 
 .main_title{
     text-align: center;
@@ -148,6 +148,9 @@ header a:visited {
     background-color: transparent;
     border: none;
     font-size: 3em;
+    position: fixed;
+    bottom: 10%;
+    left: 0px;
 }
 
 .latest_articles_container{
@@ -156,6 +159,7 @@ header a:visited {
     grid-template-rows: 1fr 1fr 1fr;
     width: 100%;
     background-color: #f6f3f2;
+    margin-left: 3%;
 }
 
 .smashing_members {
@@ -726,14 +730,8 @@ p {
     z-index: -1;
 }
 
-#hidden_cat{
-    display: inline;
-    float: left;
-    height: 10%;
-    width: 10%;
-}
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 993px) {
     #hidden_cat{
         display: none;
     }
@@ -760,7 +758,58 @@ p {
     height: 6em;
 }
 
-@media screen and (min-width: 992px) {
-    #hidden_cat{
-        display: none;
+@media screen and (min-width: 770px) and (max-width: 1000px) {
+    .grid_container {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+        color: white;
     }
+
+    .latest_articles_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        background-color: #f6f3f2;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .article_zoom:hover {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.0);
+        background-color: white;
+        z-index: 1;
+        box-shadow: 7px 7px 7px 7px rgba(3, 3, 3, 0.5);
+    }
+    
+}
+
+
+
+@media screen and (max-width: 769px) {
+    .grid_container {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+        color: white;
+    }
+
+    .latest_articles_container{
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+        background-color: #f6f3f2;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .article_zoom:hover {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.0);
+        background-color: white;
+        z-index: 1;
+        box-shadow: 7px 7px 7px 7px rgba(3, 3, 3, 0.5);
+    }
+    
+}
