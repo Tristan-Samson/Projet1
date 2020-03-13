@@ -96,69 +96,89 @@
         </div>
     </header>
 
-<article class="single_article">
-    <div class="bio_article">
-        <img src="images/portrait-placeholder.png" alt="" class ="rotate">
-        <h4>About The Author</h4>
-        <p>Darshan Somashekar is a technology entrepreneur who has built & sold two startups. His latest fun project is a solitaire site called<a href="">Solitaired</a>. Previously, …<a href="">More about Darshan …</a></p>
-    </div>
-    <div id="article_title">
-        <div id="tri_date">March 11, 2020 • <a href="">Leave a comment</a></div>
-        <h1 class="text_gtr big_font">Creating Secure Password Flows With NodeJS And MySQL</h1>
-    </div>
-    <div id="div_intro">
-        <h3 id="quick_summary">Quick summary &#8620;</h3>
-        <p>Reset password functionality is table stakes for any user-friendly application. It can also be a security nightmare. Using NodeJS and MySQL, Darshan demonstrates how to successfully create a secure reset password flow so you can avoid these pitfalls.</p>
-    </div>
-    <div id="tri_icons">
-        <i class="far fa-calendar-alt"><span class="grey_txt"> 11 min read</span></i>
-        <i class="fas fa-tag"><span class="grey_txt"> <a href="">Node.js</a>, <a href="">JavaScript</a>, <a href="">Security</a></span></i>
-        <i class="fab fa-twitter"><span class="grey_txt"> Share on <a href="">Twitter</a> or <a href="">LinkedIn</a></span></i>
-    </div>
-    <img src="images/slack.png" alt="" id="pub_article" class="tri_hidden">
-    <div class="tri_contenu">
-        <img src="images/cat.svg" alt="" id ="hidden_cat">
-        <p>
-            <strong>If you’re anything like me, you’ve forgotten your </strong>password more than once, especially on sites you haven’t visited in a while. You’ve probably also seen, and/or been mortified by, reset password emails that contain your password in plain text.
-        </p>
-        <p>
-            Unfortunately, the reset password workflow gets short shrift and limited attention during application development. This not only can lead to a frustrating user experience, but can also leave your application with gaping security holes.
-        </p>
-        <p>    
-            We’re going to cover how to build a secure reset password workflow. We’ll be using NodeJS and MySQL as our base components. If you’re writing using a different language, framework, or database, you can still benefit from following the general "Security Tips" outlined in each section.
-        </p>
-        <p>    
-            A reset password flow consists of the following components:
-        </p>
-        <ul>
-            <li>A link to send the user to the start of the workflow.</li>
-            <li>A form that lets the user submit their email.</li>
-            <li>A lookup that validates the email and sends an email to the address.</li>
-            <li>An email that contains the reset token with an expiry that allows the user to reset their password.</li>
-            <li>A form that let’s the user generate a new password.</li>
-            <li>Saving the new password and letting the user log in again with the new password.</li>
-        </ul>
-        <p>
-            Besides Node, Express & MySQL, we'll be using the following libraries:
-        </p>
-        <ul>
-            <li>Sequelize ORM</li>
-            <li>Nodemailer</li>
-        </ul>
-        <p>
-            <a href="">Sequelize</a> is a NodeJS database ORM that makes it easier to run database migrations as well as security create queries. <a href="">Nodemailer</a> is a popular NodeJS email library that we’ll use to send password reset emails.
-        </p>
-        <h2>Security Tip #1</h2>
-        <p>Some articles suggest secure password flows can be designed using JSON Web Tokens (JWT), which eliminate the need for database storage (and thus are easier to implement). We don’t use this approach on our site, because JWT token secrets are usually stored right in code. We want to avoid having ‘one secret’ to rule them all (for the same reason you don’t salt passwords with the same value), and therefore need to move this information into a database.</p>
-        <h2>Installation</h2>
-        <p>
-            First, install Sequelize, Nodemailer, and other associated libraries:
-        </p>
-        <code>$ npm install --save sequelize sequelize-cli mysql crypto nodemailer</code>
-        <p>In the route where you want to include your reset workflows, add the required modules. If you need a refresher on Express and routes, check out their <a href="">guide</a>.</p>
-        <code>const nodemailer = require('nodemailer');</code>
-        <p>And configure it with your email SMTP credentials.</p>
-        <code>const transport = nodemailer.createTransport({
+    <article class="single_article">
+        <div class="bio_article">
+            <img src="images/portrait-placeholder.png" alt="" class="rotate">
+            <h4>About The Author</h4>
+            <p>Darshan Somashekar is a technology entrepreneur who has built & sold two startups. His latest fun project
+                is a solitaire site called<a href="">Solitaired</a>. Previously, …<a href="">More about Darshan …</a>
+            </p>
+        </div>
+        <div id="article_title">
+            <div id="tri_date">March 11, 2020 • <a href="">Leave a comment</a></div>
+            <h1 class="text_gtr big_font">Creating Secure Password Flows With NodeJS And MySQL</h1>
+        </div>
+        <div id="div_intro">
+            <h3 id="quick_summary">Quick summary &#8620;</h3>
+            <p>Reset password functionality is table stakes for any user-friendly application. It can also be a security
+                nightmare. Using NodeJS and MySQL, Darshan demonstrates how to successfully create a secure reset
+                password flow so you can avoid these pitfalls.</p>
+        </div>
+        <div id="tri_icons">
+            <i class="far fa-calendar-alt"><span class="grey_txt"> 11 min read</span></i>
+            <i class="fas fa-tag"><span class="grey_txt"> <a href="">Node.js</a>, <a href="">JavaScript</a>, <a
+                        href="">Security</a></span></i>
+            <i class="fab fa-twitter"><span class="grey_txt"> Share on <a href="">Twitter</a> or <a
+                        href="">LinkedIn</a></span></i>
+        </div>
+        <img src="images/slack.png" alt="" id="pub_article" class="tri_hidden">
+        <div class="tri_contenu">
+            <img src="images/cat.svg" alt="" id="hidden_cat">
+            <p>
+                <strong>If you’re anything like me, you’ve forgotten your </strong>password more than once, especially
+                on sites you haven’t visited in a while. You’ve probably also seen, and/or been mortified by, reset
+                password emails that contain your password in plain text.
+            </p>
+            <p>
+                Unfortunately, the reset password workflow gets short shrift and limited attention during application
+                development. This not only can lead to a frustrating user experience, but can also leave your
+                application with gaping security holes.
+            </p>
+            <p>
+                We’re going to cover how to build a secure reset password workflow. We’ll be using NodeJS and MySQL as
+                our base components. If you’re writing using a different language, framework, or database, you can still
+                benefit from following the general "Security Tips" outlined in each section.
+            </p>
+            <p>
+                A reset password flow consists of the following components:
+            </p>
+            <ul>
+                <li>A link to send the user to the start of the workflow.</li>
+                <li>A form that lets the user submit their email.</li>
+                <li>A lookup that validates the email and sends an email to the address.</li>
+                <li>An email that contains the reset token with an expiry that allows the user to reset their password.
+                </li>
+                <li>A form that let’s the user generate a new password.</li>
+                <li>Saving the new password and letting the user log in again with the new password.</li>
+            </ul>
+            <p>
+                Besides Node, Express & MySQL, we'll be using the following libraries:
+            </p>
+            <ul>
+                <li>Sequelize ORM</li>
+                <li>Nodemailer</li>
+            </ul>
+            <p>
+                <a href="">Sequelize</a> is a NodeJS database ORM that makes it easier to run database migrations as
+                well as security create queries. <a href="">Nodemailer</a> is a popular NodeJS email library that we’ll
+                use to send password reset emails.
+            </p>
+            <h2>Security Tip #1</h2>
+            <p>Some articles suggest secure password flows can be designed using JSON Web Tokens (JWT), which eliminate
+                the need for database storage (and thus are easier to implement). We don’t use this approach on our
+                site, because JWT token secrets are usually stored right in code. We want to avoid having ‘one secret’
+                to rule them all (for the same reason you don’t salt passwords with the same value), and therefore need
+                to move this information into a database.</p>
+            <h2>Installation</h2>
+            <p>
+                First, install Sequelize, Nodemailer, and other associated libraries:
+            </p>
+            <code>$ npm install --save sequelize sequelize-cli mysql crypto nodemailer</code>
+            <p>In the route where you want to include your reset workflows, add the required modules. If you need a
+                refresher on Express and routes, check out their <a href="">guide</a>.</p>
+            <code>const nodemailer = require('nodemailer');</code>
+            <p>And configure it with your email SMTP credentials.</p>
+            <code>const transport = nodemailer.createTransport({
             host: process.env.EMAIL_HOST,
             port: process.env.EMAIL_PORT,
             secure: true,
@@ -167,72 +187,84 @@
                pass: process.env.EMAIL_PASS
             }
         });</code>
-        <p>The email solution I'm using is <a href=""> AWS's Simple Email Service</a>, but you can use anything (Mailgun, etc).</p>
-        <p>If this is your first time setting up your email sending service, you'll need to spend some time configuring the appropriate Domain Keys and setting up authorizations. If you use Route 53 along with SES, this is super simple and done virtually automatically, which is why I picked it. AWS has some tutorials on how <a href="">SES works with Route53</a>.</p>
-        <h2>Security tip #2</h2>
-        <p>To store the credentials away from my code, I use <a href="">dotenv</a>, which lets me create a local .env file with my environment variables. That way, when I deploy to production, I can use different production keys that aren’t visible in code, and therefore lets me restrict permissions of my configuration to only certain members of my team.</p>
-        <h2>Database Setup</h2>
-        <p>Since we're going to be sending reset tokens to users, we need to store those tokens in a database.</p>
-        <p>I am assuming you have a functioning users table in your database. If you’re using Sequelize already, great! If not, you may want to brush up on Sequelize and the <a href="">Sequelize CLI</a>.</p>
-        <p>If you haven’t used Sequelize yet in your app, you can set it up by running the command below in your app’s root folder:</p>
-        <code>$ sequelize init</code>
-        <p>This will create a number of new folders in your setup, including migrations and models.</p>
-        <p>This will also create a config file. In your config file, update the <code>development</code> block with the credentials to your local mysql database server</p>
-        <p>Let's use Sequelize's CLI tool to generate the database table for us.</p>
-    </div>
-    <div id="tri_newsletter" class="tri_hidden">
-        <img src="images/newsletter-fish-cat.svg" alt="">
-        <h2>Smashing Newsletter</h2>
-        <p>Upgrade your inbox and get our editors’ picks 2× a month — delivered right into your inbox. <a href="">Earlier issues.</a></p>
-        <form action="" id="form_newsletter">
-            <input type="mail" name="mail" id="mail" placeholder="Your (smashing) email">
-            <button class="event_button text_btr">Subscribe →</button>
-        </form>
-    </div>
-</article>
+            <p>The email solution I'm using is <a href=""> AWS's Simple Email Service</a>, but you can use anything
+                (Mailgun, etc).</p>
+            <p>If this is your first time setting up your email sending service, you'll need to spend some time
+                configuring the appropriate Domain Keys and setting up authorizations. If you use Route 53 along with
+                SES, this is super simple and done virtually automatically, which is why I picked it. AWS has some
+                tutorials on how <a href="">SES works with Route53</a>.</p>
+            <h2>Security tip #2</h2>
+            <p>To store the credentials away from my code, I use <a href="">dotenv</a>, which lets me create a local
+                .env file with my environment variables. That way, when I deploy to production, I can use different
+                production keys that aren’t visible in code, and therefore lets me restrict permissions of my
+                configuration to only certain members of my team.</p>
+            <h2>Database Setup</h2>
+            <p>Since we're going to be sending reset tokens to users, we need to store those tokens in a database.</p>
+            <p>I am assuming you have a functioning users table in your database. If you’re using Sequelize already,
+                great! If not, you may want to brush up on Sequelize and the <a href="">Sequelize CLI</a>.</p>
+            <p>If you haven’t used Sequelize yet in your app, you can set it up by running the command below in your
+                app’s root folder:</p>
+            <code>$ sequelize init</code>
+            <p>This will create a number of new folders in your setup, including migrations and models.</p>
+            <p>This will also create a config file. In your config file, update the <code>development</code> block with
+                the credentials to your local mysql database server</p>
+            <p>Let's use Sequelize's CLI tool to generate the database table for us.</p>
+        </div>
+        <div id="tri_newsletter" class="tri_hidden">
+            <img src="images/newsletter-fish-cat.svg" alt="">
+            <h2>Smashing Newsletter</h2>
+            <p>Upgrade your inbox and get our editors’ picks 2× a month — delivered right into your inbox. <a
+                    href="">Earlier issues.</a></p>
+            <form action="" id="form_newsletter">
+                <input type="mail" name="mail" id="mail" placeholder="Your (smashing) email">
+                <button class="event_button text_btr">Subscribe →</button>
+            </form>
+        </div>
+    </article>
 
     <footer>
-        <h4>Browse All Smashing Magazine Topics</h4>
-        <ul>
-            <li class="text_wtvdr"><a href="Accessibility">Accessibility</a></li>
-            <li class="text_wtvdr"><a href="Android">Android</a></li>
-            <li class="text_wtvdr"><a href="Animation">Animation</a></li>
-            <li class="text_wtvdr"><a href="Apps">Apps</a></li>
-            <li class="text_wtvdr"><a href="CSS">CSS</a></li>
-            <li class="text_wtvdr"><a href="Design">Design</a></li>
-            <li class="text_wtvdr"><a href="Design Patterns">Design Patterns</a></li>
-            <li class="text_wtvdr"><a href="Design Systems">Design Systems</a></li>
-            <li class="text_wtvdr"><a href="E-Commerce">E-Commerce</a></li>
-            <li class="text_wtvdr"><a href="Freebies">Freebies</a></li>
-            <li class="text_wtvdr"><a href="Graphics">Graphics</a></li>
-            <li class="text_wtvdr"><a href="HTML">HTML</a></li>
-            <li class="text_wtvdr"><a href="Illustrator">Illustrator</a></li>
-            <li class="text_wtvdr"><a href="Inspiration">Inspiration</a></li>
-            <li class="text_wtvdr"><a href="iOS">iOS</a></li>
-            <li class="text_wtvdr"><a href="Javascript">Javascript</a></li>
-            <li class="text_wtvdr"><a href="Mobile">Mobile</a></li>
-            <li class="text_wtvdr"><a href="Pattern Libraries">Pattern Libraries</a></li>
-            <li class="text_wtvdr"><a href="Performance">Performance</a></li>
-            <li class="text_wtvdr"><a href="Photoshop">Photoshop</a></li>
-            <li class="text_wtvdr"><a href="Plugins">Plugins</a></li>
-            <li class="text_wtvdr"><a href="React">React</a></li>
-            <li class="text_wtvdr"><a href="Responsive Web Design">Responsive Web Design</a></li>
-            <li class="text_wtvdr"><a href="Service Workers">Service Workers</a></li>
-            <li class="text_wtvdr"><a href="Sketch">Sketch</a></li>
-            <li class="text_wtvdr"><a href="Typography">Typography</a></li>
-            <li class="text_wtvdr"><a href="UI">UI</a></li>
-            <li class="text_wtvdr"><a href="Usability">Usability</a></li>
-            <li class="text_wtvdr"><a href="User Experience">User Experience</a></li>
-            <li class="text_wtvdr"><a href="Wallpapers">Wallpapers</a></li>
-            <li class="text_wtvdr"><a href="Web Design">Web Design</a></li>
-            <li class="text_wtvdr"><a href="Word Press">Word Press</a></li>
-            <li class="text_wtvdr"><a href="Wordflow">Wordflow</a></li>
+        <h4 class="footer_topics_title">Browse All Smashing Magazine Topics</h4>
+        <ul class="topics_bottom">
+            <li><a href="Accessibility" class="text_wtvdr">Accessibility</a></li>
+            <li><a href="Android" class="text_wtvdr">Android</a></li>
+            <li><a href="Animation" class="text_wtvdr">Animation</a></li>
+            <li><a href="Apps" class="text_wtvdr">Apps</a></li>
+            <li><a href="CSS" class="text_wtvdr">CSS</a></li>
+            <li><a href="Design" class="text_wtvdr">Design</a></li>
+            <li><a href="Design Patterns" class="text_wtvdr">Design Patterns</a></li>
+            <li><a href="Design Systems" class="text_wtvdr">Design Systems</a></li>
+            <li><a href="E-Commerce" class="text_wtvdr">E-Commerce</a></li>
+            <li><a href="Freebies" class="text_wtvdr">Freebies</a></li>
+            <li><a href="Graphics" class="text_wtvdr">Graphics</a></li>
+            <li><a href="HTML" class="text_wtvdr">HTML</a></li>
+            <li><a href="Illustrator" class="text_wtvdr">Illustrator</a></li>
+            <li><a href="Inspiration" class="text_wtvdr">Inspiration</a></li>
+            <li><a href="iOS" class="text_wtvdr">iOS</a></li>
+            <li><a href="Javascript" class="text_wtvdr">Javascript</a></li>
+            <li><a href="Mobile" class="text_wtvdr">Mobile</a></li>
+            <li><a href="Pattern Libraries" class="text_wtvdr">Pattern Libraries</a></li>
+            <li><a href="Performance" class="text_wtvdr">Performance</a></li>
+            <li><a href="Photoshop" class="text_wtvdr">Photoshop</a></li>
+            <li><a href="Plugins" class="text_wtvdr">Plugins</a></li>
+            <li><a href="React" class="text_wtvdr">React</a></li>
+            <li><a href="Responsive Web Design" class="text_wtvdr">Responsive Web Design</a></li>
+            <li><a href="Service Workers" class="text_wtvdr">Service Workers</a></li>
+            <li><a href="Sketch" class="text_wtvdr">Sketch</a></li>
+            <li><a href="Typography" class="text_wtvdr">Typography</a></li>
+            <li><a href="UI" class="text_wtvdr">UI</a></li>
+            <li><a href="Usability" class="text_wtvdr">Usability</a></li>
+            <li><a href="User Experience" class="text_wtvdr">User Experience</a></li>
+            <li><a href="Wallpapers" class="text_wtvdr">Wallpapers</a></li>
+            <li><a href="Web Design" class="text_wtvdr">Web Design</a></li>
+            <li><a href="Word Press" class="text_wtvdr">Word Press</a></li>
+            <li><a href="Wordflow" class="text_wtvdr">Wordflow</a></li>
         </ul>
-        <p>With a commitment to quality content for the design community</p>
-        <p>Founded b Vitaly Friedman and Sven Lennarts. 2006-2020.</p>
-        <p>Smashing is proudly running on <a href="https://www.netlify.com/">Netfily.</a></p>
-        <p>Fonts by <a href="https://latinotype.com/">Latinotype.</a></p>
-        <ul>
+        <p class="credits">With a commitment to quality content for the design community</p>
+        <p class="credits">Founded b Vitaly Friedman and Sven Lennarts. 2006-2020.</p>
+        <p class="credits">Smashing is proudly running on <a href="https://www.netlify.com/"
+                class="underline_">Netfily.</a></p>
+        <p class="credits">Fonts by <a href="https://latinotype.com/" class="underline_">Latinotype.</a></p>
+        <ul class="footer">
             <li><a href="/write-for-us/">Write for us</a></li>
             <li><a href="/contact/">Contact us</a></li>
             <li><a href="/about/">About us (Impressum)</a></li>
@@ -244,7 +276,7 @@
             </li>
         </ul>
         <a href='#top' data-scroll="#top" title="Back to top">
-            <img src="images/back-to-top-arrow.png" alt="back-to-top-arrow" />
+            <img class="retour_en_haut rotate opacity_top" src="images/back-to-top-arrow.png" alt="back-to-top-arrow" />
     </footer>
 
 </body>
