@@ -9,6 +9,7 @@ a{
 a:visited{
     color: inherit;
 }
+
 header{
     background-color: #d33a2c;
     color: white;
@@ -811,6 +812,7 @@ p {
         z-index: 1;
         box-shadow: 7px 7px 7px 7px rgba(3, 3, 3, 0.5);
     }
+}
     
 /*Smashing newsletter*/
 
