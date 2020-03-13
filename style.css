@@ -812,4 +812,65 @@ p {
         box-shadow: 7px 7px 7px 7px rgba(3, 3, 3, 0.5);
     }
     
+/*Smashing newsletter*/
+
+.smashing_newsletter {
+    text-align: center;
+    background-color: #d33a2c;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.image_chat_trompette {
+    height: 75%;
+    width: 75%;
+}
+
+.see_all_article {
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+    padding-bottom: 50px;
+}
+
+/*CSS du Footter*/
+
+footer{
+    background-color: #d33a2c;
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 200px;
+}
+
+.footer_topics_title {
+    margin: 2em;
+}
+
+.topics_bottom{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    padding-bottom: 50px;
+}
+
+.credits {
+    margin: 5px;
+    text-align: center;
+}
+
+.retour_en_haut {
+    border-radius: 10px;
+    position: fixed;
+    bottom: 30px; right: 40px;
+}
+
+.underline_ {
+    text-decoration: underline;
+}
+
+.footer {
+    padding: 15px;
+    text-decoration: underline;
 }
