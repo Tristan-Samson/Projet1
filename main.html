@@ -1,419 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
 
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta author="Lucas Maisonneuve, Charly Lucas, Daniel Clément, Tristan Samson">
-      <meta description="Copy of the Smashing magazine website">
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <title>Smashing Magazine</title>
-  </head>
-  <body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Lucas Maisonneuve, Charly Lucas, Daniel Clément, Tristan Samson">
+    <meta description="Copy of the Smashing magazine website">
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Smashing Magazine</title>
+    <script type="text/javascript" src="javascript.js"></script>
+</head>
+
+<body>
 
     <header>
-        <a href="main.html"><img src="images/s-icon.svg" alt="logo" class="header_icon"></a>
+        <a href="main.html"><img src="images/s-icon.svg" alt="logo" class="header_logo"></a>
         <nav>
             <ul class="list_header">
-                <li><a href=""><img src="images/tablet-icon.svg" alt="tablet icon" class="header_icon list_header_item"><h3>Articles</h3>
-                    <p>Design & Development</p></a></li>
-                <li><a href=""><img src="images/book-icon.svg" alt="book icon" class="header_icon list_header_item"><h3>Books</h3>
-                    <p</a>Physical & digital books</p></li>
-                <li><a href=""><img src="images/ticket-icon.svg" alt="ticket icon" class="header_icon list_header_item"><h3>Events</h3>
-                    <p>Conferences & workshops</p></a></li>
-                <li><a href=""><img src="images/panel-icon.svg" alt="panel icon" class="header_icon list_header_item"><h3>Jobs</h3>
-                    <p>Find work & employees</p></a></li>
-                <li><a href=""><img src="images/tent-icon.svg" alt="tent icon" class="header_icon list_header_item"><h3>Membership</h3>
-                    <p>Webinars & early-birds</p></a></li>
+                <li>
+                    <a href="articles.html" class="text_wtvdr">
+                        <img src="images/tablet-icon.svg" alt="tablet icon" class="header_icon list_header_item rotate">
+                        <h3>Articles</h3>
+                        <p>Design & Development</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text_wtvdr">
+                        <img src="images/book-icon.svg" alt="book icon" class="header_icon list_header_item rotate">
+                        <h3>Books</h3>
+                        <p>Physical & digital books</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="events.html" class="text_wtvdr">
+                        <img src="images/ticket-icon.svg" alt="ticket icon" class="header_icon list_header_item rotate">
+                        <h3>Events</h3>
+                        <p>Conferences & workshops</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text_wtvdr">
+                        <img src="images/panel-icon.svg" alt="panel icon" class="header_icon list_header_item rotate">
+                        <h3>Jobs</h3>
+                        <p>Find work & employees</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="text_wtvdr">
+                        <img src="images/tent-icon.svg" alt="tent icon" class="header_icon list_header_item rotate">
+                        <h3>Membership</h3>
+                        <p>Webinars & early-birds</p>
+                    </a>
+                </li>
             </ul>
         </nav>
-        <button class="header_button" type="button"><img src="images/loupe-icon.png" alt="bouton loupe" class="header_icon">Topics</button>
-        <input type="search" placeholder="Search Smashing..." name="search" aria-label="Search through site content" class="header_form">
-        <h4 class="header_title">BROWSE ALL TOPICS</h4>
-        <ul class="Topics">
-            <li><a href="">Accessibility</a></li>
-            <li><a href="">Android</a></li>
-            <li><a href="">Animation</a></li>
-            <li><a href="">Apps</a></li>
-            <li><a href="">CSS</a></li>
-            <li><a href="">Design</a></li>
-            <li><a href="">Design Patterns</a></li>
-            <li><a href="">Design Systems</a></li>
-            <li><a href="">E-Commerce</a></li>
-            <li><a href="">Freebies</a></li>
-            <li><a href="">Graphics</a></li>
-            <li><a href="">HTML</a></li>
-            <li><a href="">Illustrator</a></li>
-            <li><a href="">Performance</a></li>
-            <li><a href="">Photoshop</a></li>
-            <li><a href="">Plugins</a></li>
-            <li><a href="">React</a></li>
-            <li><a href="">Responsive Web Design</a></li>
-            <li><a href="">Service Workers</a></li>
-            <li><a href="">Sketch</a></li>
-            <li><a href="">Typography</a></li>
-            <li><a href="">UI</a></li>
-            <li><a href="">Usability</a></li>
-            <li><a href="">User Experience</a></li>
-            <li><a href="">Wallpapers</a></li>
-            <li><a href="">Web Design</a></li>
-            <li><a href="">WordPress</a></li>
-            <li><a href="">Workflow</a></li>
-        </ul>
+        <button class="header_button" type="button" onclick="hide()"><img src="images/loupe-icon.png" alt="bouton loupe"
+                class="header_icon">Topics</button>
+        <div id="hidden_menu">
+            <input type="search" placeholder="Search Smashing..." name="search" aria-label="Search through site content"
+                class="header_form">
+            <h4 class="header_title">BROWSE ALL TOPICS</h4>
+            <ul class="Topics">
+                <li><a href="" class="text_wtdr">Accessibility</a></li>
+                <li><a href="" class="text_wtdr">Android</a></li>
+                <li><a href="" class="text_wtdr">Animation</a></li>
+                <li><a href="" class="text_wtdr">Apps</a></li>
+                <li><a href="" class="text_wtdr">CSS</a></li>
+                <li><a href="" class="text_wtdr">Design</a></li>
+                <li><a href="" class="text_wtdr">Design Patterns</a></li>
+                <li><a href="" class="text_wtdr">Design Systems</a></li>
+                <li><a href="" class="text_wtdr">E-Commerce</a></li>
+                <li><a href="" class="text_wtdr">Freebies</a></li>
+                <li><a href="" class="text_wtdr">Graphics</a></li>
+                <li><a href="" class="text_wtdr">HTML</a></li>
+                <li><a href="" class="text_wtdr">Illustrator</a></li>
+                <li><a href="" class="text_wtdr">Performance</a></li>
+                <li><a href="" class="text_wtdr">Photoshop</a></li>
+                <li><a href="" class="text_wtdr">Plugins</a></li>
+                <li><a href="" class="text_wtdr">React</a></li>
+                <li><a href="" class="text_wtdr">Responsive Web Design</a></li>
+                <li><a href="" class="text_wtdr">Service Workers</a></li>
+                <li><a href="" class="text_wtdr">Sketch</a></li>
+                <li><a href="" class="text_wtdr">Typography</a></li>
+                <li><a href="" class="text_wtdr">UI</a></li>
+                <li><a href="" class="text_wtdr">Usability</a></li>
+                <li><a href="" class="text_wtdr">User Experience</a></li>
+                <li><a href="" class="text_wtdr">Wallpapers</a></li>
+                <li><a href="" class="text_wtdr">Web Design</a></li>
+                <li><a href="" class="text_wtdr">WordPress</a></li>
+                <li><a href="" class="text_wtdr">Workflow</a></li>
+            </ul>
+        </div>
     </header>
 
-      <h1>Don't Miss These Latest Articles</h1>
-        <div class="grid_container">
+    <h1 class="main_title"><span class="white_label">Don't Miss These Latest Articles</span></h1>
+    <div class="grid_container">
         <article class="article1">
-            <img src="images/portrait-placeholder.png" alt="author picture">
-            <a href="">Tristan Samson wrote</a>
+            <img src="images/portrait-placeholder.png" alt="author picture" class="rotate">
+            <a href="single_article.html">Tristan Samson wrote</a>
             <h1>Avoid Keyboard Event-Related Bugs In Browser-Based Transliteration</h1>
             <a href=""><img src="images/comment-icon.png" alt="bullededialogue" class="article_icon">Leave a comment</a>
             <img src="images/white-right-arrow-icon.png" alt="fleche vers la droite" class="article_icon">
         </article>
         <article class="article2">
-            <img src="images/portrait-placeholder.png" alt="author picture">
-            <a href="">Daniel Clément wrote</a>
+            <img src="images/portrait-placeholder.png" alt="author picture" class="rotate">
+            <a href="single_article.html">Daniel Clément wrote</a>
             <h1>Introducing Alpine.js: A Tiny Javascript Framework</h1>
             <a href=""><img src="images/comment-icon.png" alt="bullededialogue" class="article_icon">13 comments</a>
             <img src="images/white-right-arrow-icon.png" alt="fleche vers la droite" class="article_icon"">
         </article>
-        <article class="article3">
-            <img src="images/portrait-placeholder.png" alt="author picture">
-            <a href="">Charly Lucas wrote</a>
+        <article class=" article3">
+            <img src="images/portrait-placeholder.png" alt="author picture" class="rotate">
+            <a href="single_article.html">Charly Lucas wrote</a>
             <h1>Why Are We Talking About CSS4?</h1>
             <a href=""><img src="images/comment-icon.png" alt="bullededialogue" class="article_icon">Leave a comment</a>
             <img src="images/white-right-arrow-icon.png" alt="fleche vers la droite" class="article_icon">
         </article>
         <article class="article4">
-            <img src="images/portrait-placeholder.png" alt="author picture">
-            <a href="">Lucas Maisonneuve wrote</a>
+            <img src="images/portrait-placeholder.png" alt="author picture" class="rotate">
+            <a href="single_article.html">Lucas Maisonneuve wrote</a>
             <h1>When You Find A Good Idea, Look For A Better One</h1>
             <a href=""><img src="images/comment-icon.png" alt="bullededialogue" class="article_icon">2 comments</a>
             <img src="images/white-right-arrow-icon.png" alt="fleche vers la droite" class="article_icon">
         </article>
-        </div>
+    </div>
 
 
-        <h4>Latest Posts</h4>
+    <h4 class="vertical">Latest Posts</h4>
     <section class="latest_articles_container">
-          <article class="article_zoom">
-              <a href="">
-                  <h6>7 days ago</h6>
-                  <h2>
-                      <a href="">Inspired Design Decisions: Neville Brody Design Cannot Remain Neutral</a>
-                  </h2>
-                  <h5>by <a href="">Andrew Clarke</a></h5>
-                  <p>How do we use blend modes to add depth to our designs, vertical text for impact and clipping paths to bring in character and energy to a design? In this article, we’ll explore just that.</p>
-                  <button><a href="">→</a></button>
-              </a>
-          </article>
-          <article class="article_zoom">
-              <a href="">
-                  <h6>9 days ago</h6>
-                  <h2>
-                      <a href="">Embrace The Possibilities (March 2020 Wallpapers)</a>
-                  </h2>
-                  <h5>by <a href="">Cosima Mielke</a></h5>
-                  <p>Do you need a little inspiration boost? Well, then our new batch of wallpapers is for you. Designed by artists and designers from across the globe, they come in versions with and without a calendar for March 2020.</p>
-                  <button><a href="">→</a></button>
-              </a>
-          </article>
-          <article class="article_zoom">
-              <a href="">
-                  <h6>11 days ago</h6>
-                  <h2>
-                      <a href="">How To Build A Music Manager With Nuxt.js And Express.js</a>
-                  </h2>
-                  <h5>by <a href="">Deven Rathore</a></h5>
-                  <p>This article introduces how Multer streamlines the process of handling file uploads. It also introduces how to use Mongoose to interact with our database by building a music manager app using Express.js alongside Multer for the music upload and …</p>
-                  <button><a href="">→</a></button>
-              </a>
-          </article>
-          <div>
-            <a href=""><img src="images/slack.png" alt="An ad for Slack"></a>
+        <article class="article_zoom">
+            <a href="single_article.html">
+                <h6>7 days ago</h6>
+                <h2>
+                    <a href="single_article.html">Inspired Design Decisions: Neville Brody Design Cannot Remain Neutral</a>
+                </h2>
+                <h5>by <a href="single_article.html">Andrew Clarke</a></h5>
+                <p>How do we use blend modes to add depth to our designs, vertical text for impact and clipping paths to
+                    bring in character and energy to a design? In this article, we’ll explore just that.</p>
+                <button class="article_button"><a href="">→</a></button>
+            </a>
+        </article>
+        <article class="article_zoom">
+            <a href="single_article.html">
+                <h6>9 days ago</h6>
+                <h2>
+                    <a href="">Embrace The Possibilities (March 2020 Wallpapers)</a>
+                </h2>
+                <h5>by <a href="">Cosima Mielke</a></h5>
+                <p>Do you need a little inspiration boost? Well, then our new batch of wallpapers is for you. Designed
+                    by artists and designers from across the globe, they come in versions with and without a calendar
+                    for March 2020.</p>
+                <button class="article_button"><a href="">→</a></button>
+            </a>
+        </article>
+        <article class="article_zoom">
+            <a href="single_article.html">
+                <h6>11 days ago</h6>
+                <h2>
+                    <a href="">How To Build A Music Manager With Nuxt.js And Express.js</a>
+                </h2>
+                <h5>by <a href="">Deven Rathore</a></h5>
+                <p>This article introduces how Multer streamlines the process of handling file uploads. It also
+                    introduces how to use Mongoose to interact with our database by building a music manager app using
+                    Express.js alongside Multer for the music upload and …</p>
+                <button class="article_button"><a href="">→</a></button>
+            </a>
+        </article>
+        <div class="centering">
+            <a href="single_article.html"><img src="images/slack.png" alt="An ad for Slack"></a>
         </div>
         <div class="smashing_members">
             <a href=""><img src="images/singing-barista.svg" alt="A barista to join smashers" class="baristacat"></a>
             <h1><a href="">1,651 smashing members</a></h1>
-            <p>A friendly community that keeps this website alive. With books, webinars, discounts and networking — for just 1 coffee a month. <a href="">Join the family.</a></p>
+            <p>A friendly community that keeps this website alive. With books, webinars, discounts and networking — for
+                just 1 coffee a month. <a href="">Join the family.</a></p>
             <button><a href="">Explore features →</a></button>
             <h6>Already have an account? <a href="">Sign in!</a></h6>
         </div>
-          <article class="article_zoom">
-              <a href="">
-                  <h6>12 days ago</h6>
-                  <h2>
-                      <a href="">What Does A Foldable Web Actually Mean?</a>
-                  </h2>
-                  <h5>by <a href="">Frederick O'Brien</a></h5>
-                  <p>Foldable devices have brought with them talk of a ‘foldable web,’ and the idea that long-standing web conventions may be on the verge of a serious shakeup. Is it all hype, or is it time to get flexible?</p>
-                  <button><a href="">→</a></button>
-              </a>
-          </article>
-          <article class="article_zoom">
-              <a href="">
-                  <h6>14 days ago</h6>
-                  <h2>
-                      <a href="">Smashing Podcast Episode 10 With Trine Falbe And Martin Michael Frederiksen: What Is Ethical Design?</a>
-                  </h2>
-                  <h5>by <a href="">Drew McLellan</a></h5>
-                  <p>In this episode of the Smashing Podcast, we’re talking about Ethical Design. What does it mean for a design to be ethical, and how do we make improvements in our own projects? Drew McLellan speaks to Trine Falbe and Martin Michael Frederiksen to find …</p>
-                  <button><a href="">→</a></button>
-              </a>
-          </article>
-          <article class="article_zoom">
-              <a href="">
-                  <h6>14 days ago</h6>
-                  <h2>
-                      <a href="">Setting Up Tailwind CSS In A React Project</a>
-                  </h2>
-                  <h5>by <a href="">Blessing Krofegha</a></h5>
-                  <p>This article introduces Tailwind CSS, a CSS library that gives you all of the building blocks you need to build bespoke designs without opinionated styles. You’ll also learn how to seamlessly set up Tailwind CSS in a React project.</p>
-                  <button><a href="">→</a></button>
-              </a>
-          </article>
-          <article class="article_zoom">
-              <a href="">
-                  <h6>6 days ago</h6>
-                  <h2>
-                      <a href="">When You Find A Good Idea, Look For A Better One</a>
-                  </h2>
-                  <h5>by <a href="">Tony Kim</a></h5>
-                  <p>Prototyping helps to formulate the main trajectory of the design by framing your mind around a continuous pursuit of better concepts. Meet ProtoPie.</p>
-                  <button><a href="">→</a></button>
-              </a>
-          </article>
-          <section class="smashing_members">
+        <article class="article_zoom">
+            <a href="single_article.html">
+                <h6>12 days ago</h6>
+                <h2>
+                    <a href="">What Does A Foldable Web Actually Mean?</a>
+                </h2>
+                <h5>by <a href="">Frederick O'Brien</a></h5>
+                <p>Foldable devices have brought with them talk of a ‘foldable web,’ and the idea that long-standing web
+                    conventions may be on the verge of a serious shakeup. Is it all hype, or is it time to get flexible?
+                </p>
+                <button class="article_button"><a href="">→</a></button>
+            </a>
+        </article>
+        <article class="article_zoom">
+            <a href="single_article.html">
+                <h6>14 days ago</h6>
+                <h2>
+                    <a href="">Smashing Podcast Episode 10 With Trine Falbe And Martin Michael Frederiksen: What Is
+                        Ethical Design?</a>
+                </h2>
+                <h5>by <a href="">Drew McLellan</a></h5>
+                <p>In this episode of the Smashing Podcast, we’re talking about Ethical Design. What does it mean for a
+                    design to be ethical, and how do we make improvements in our own projects? Drew McLellan speaks to
+                    Trine Falbe and Martin Michael Frederiksen to find …</p>
+                <button class="article_button"><a href="">→</a></button>
+            </a>
+        </article>
+        <article class="article_zoom">
+            <a href="single_article.html">
+                <h6>14 days ago</h6>
+                <h2>
+                    <a href="">Setting Up Tailwind CSS In A React Project</a>
+                </h2>
+                <h5>by <a href="">Blessing Krofegha</a></h5>
+                <p>This article introduces Tailwind CSS, a CSS library that gives you all of the building blocks you
+                    need to build bespoke designs without opinionated styles. You’ll also learn how to seamlessly set up
+                    Tailwind CSS in a React project.</p>
+                <button class="article_button"><a href="">→</a></button>
+            </a>
+        </article>
+        <article class="article_zoom">
+            <a href="single_article.html">
+                <h6>6 days ago</h6>
+                <h2>
+                    <a href="">When You Find A Good Idea, Look For A Better One</a>
+                </h2>
+                <h5>by <a href="">Tony Kim</a></h5>
+                <p>Prototyping helps to formulate the main trajectory of the design by framing your mind around a
+                    continuous pursuit of better concepts. Meet ProtoPie.</p>
+                <button class="article_button"><a href="">→</a></button>
+            </a>
+        </article>
+        <section class="smashing_members">
             <a href=""><img src="images/cat-smashing-tv-2.svg" alt="A cat with a camera" class="baristacat"></a>
             <h1><a href="">New on smashing TV</a></h1>
-            <p>A channel where seasoned developers show how they design, build, work and play. Coming up next: <a href="">Live UX Review, With Paul Boag</a> with Paul Boag (Mar 10).</p>
+            <p>A channel where seasoned developers show how they design, build, work and play. Coming up next: <a
+                    href="">Live UX Review, With Paul Boag</a> with Paul Boag (Mar 10).</p>
             <button><a href="">See all upcoming episodes →</a></button>
             <h6>Already have an account ? <a href="">Sign in!</a></h6>
         </section>
-         </section>
-      <div>
-          <a href="">See all latest articles →</a>
-      </div>
-      <section class="ethical">
-          <h5>March 2020 • Shipping now</h5>
-          <h1><a href="">Ethical Design Handbook:</a> Leaving Dark Patterns Behind.</h1>
-          <p>With <strong>practical techniques & strategies </strong> to make honest interfaces work for digital products. Help your business grow sustainably — without dark patterns — and comply with GDPR and CCPA.</p>
-          <button><a href="">Learn more about the book →</a></button>
-          <a href=""><img src="images/ethical-design-transparent.png" alt="A cat trying to sell its book"></a>
-      </section>
-    
-        <section>
+    </section>
+    <div>
+        <a href="">See all latest articles →</a>
+    </div>
+    <section class="ethical">
+        <h5>March 2020 • Shipping now</h5>
+        <h1><a href="">Ethical Design Handbook:</a> Leaving Dark Patterns Behind.</h1>
+        <p>With <strong>practical techniques & strategies </strong> to make honest interfaces work for digital products.
+            Help your business grow sustainably — without dark patterns — and comply with GDPR and CCPA.</p>
+        <button><a href="">Learn more about the book →</a></button>
+        <a href=""><img src="images/ethical-design-transparent.png" alt="A cat trying to sell its book"></a>
+    </section>
+
+    <section class="community">
         <div class="container">
             <div class="row">
-                <h4>
+                <h4 class="vertical">
                     <span>Community Links</span>
                 </h4>
                 <div class="col-12">
-                    <div class="person-of-the-week">
-                        <div class="person-of-the-week-image">
+                    <div class="person-of-the-week container_hightlights col10">
+                        <div class="person-of-the-week-image dsk3">
                             <figure class="bio-image">
                                 <a href="" class="bio-image-link">
-                                    <div>
-                                        <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="">
+                                    <div class="bio-image-wrapper">
+                                        <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt=""
+                                            class="bio-image-image rotate">
                                     </div>
                                 </a>
                             </figure>
                         </div>
-                        <div>
-                            <h4>Person Of The Week</h4>
-                            <p>
-                                <a href="">Vasilis van Gemert</a>
-                                is a lecturer at the University of Applied Science in Amsterdam where he teaches the next generation of digital designers how to design for the web — technically, aesthetically, and with accessibility in mind. Vasilis recently completed a Design Research Master program and, to raise awareness for creating truly inclusive websites, he 
-                                <a href="">designed tailor-made sites for and with people with real disabilities</a>
-                                for his thesis. He shares his knowledge about web design and development on his 
-                                <a href="">blog</a>
-                                , in workshops, at conferences, and giving lectures at schools and meetups. Thank you for everything you do for the community, dear Vasilis!
+                        <div class="dsk1"></div>
+                        <div class=" dsk8">
+                            <h4 class="color_g">Person Of The Week</h4>
+                            <p class="potw_p">
+                                <a href="" class="color_b">Vasilis van Gemert</a>
+                                is a lecturer at the University of Applied Science in Amsterdam where he teaches the
+                                next generation of digital designers how to design for the web — technically,
+                                aesthetically, and with accessibility in mind. Vasilis recently completed a Design
+                                Research Master program and, to raise awareness for creating truly inclusive websites,
+                                he
+                                <a href="" class="color_b">designed tailor-made sites for and with people with real
+                                    disabilities</a>
+                                for his thesis. He shares his knowledge about web design and development on his
+                                <a href="" class="color_b">blog</a>
+                                , in workshops, at conferences, and giving lectures at schools and meetups. Thank you
+                                for everything you do for the community, dear Vasilis!
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="community-hightlights">
-                    <div class="l-community-hightlights">
-                        <article>
-                            <header>
-                                <div>
-                                    <figure>
-                                        <a href="">
-                                            <div>
-                                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="">
-                                            </div>
-                                        </a>
-                                    </figure>
-                                </div>
-                                <span>
-                                    <a href="">Braid </a>
-                                    <span>wrote</span>
+                    <div class="container_hightlights justify">
+                        <div class="l-community-hightlights dsk5 container_article">
+                            <a href="" class="dsk3">
+                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="" class="rotate">
+                            </a>
+                            <article class="article-post dsk9">
+                                <span class="article-post_author-name">
+                                    <a href="" class="color_g">Braid </a>
+                                    <span class="color_g">wrote</span>
                                 </span>
-                            </header>
-                            <h1>
-                                <a href="">Vue Formulate</a>
-                            </h1>
-                            <div>
-                                <p>
-                                    March 9, 2020 — Forms are often rather tedious to author. 
+                                <h1 class="article-post">
                                     <a href="">Vue Formulate</a>
-                                    provides a powerful and flexible API that helps developers handling forms with Vue.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="l-community-hightlights">
-                        <article>
-                            <header>
-                                <div>
-                                    <figure>
-                                        <a href="">
-                                            <div>
-                                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="">
-                                            </div>
-                                        </a>
-                                    </figure>
+                                </h1>
+                                <div class="post_article">
+                                    <p class="post-article">
+                                        March 9, 2020 — Forms are often rather tedious to author.
+                                        <a href="" class="color_b">Vue Formulate</a>
+                                        provides a powerful and flexible API that helps developers handling forms with
+                                        Vue.
+                                    </p>
                                 </div>
+                            </article>
+                        </div>
+                        <div class="l-community-hightlights dsk5 container_article">
+                            <a href="" class="dsk3">
+                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="" class="rotate">
+                            </a>
+                            <article class="article-post dsk9">
                                 <span>
-                                    <a href="">Mark Boulton </a>
-                                    <span>wrote</span>
+                                    <a href="" class="color_g">Mark Boulton </a>
+                                    <span class="color_g">wrote</span>
                                 </span>
-                            </header>
-                            <h1>
-                                <a href="">Leading A Remote Design Team</a>
-                            </h1>
-                            <div>
-                                <p>
-                                    March 6, 2020 — Leading a remote design team can be a bit daunting at first. Mark Boulton shares some 
-                                    <a href="">simple principles</a>
-                                    that help you get into the swing of things quickly, so that you can start to become more productive and effective.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="l-community-hightlights">
-                        <article>
-                            <header>
-                                <div>
-                                    <figure>
-                                        <a href="">
-                                            <div>
-                                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="">
-                                            </div>
-                                        </a>
-                                    </figure>
+                                <h1 class="article-post">
+                                    <a href="">Leading A Remote Design Team</a>
+                                </h1>
+                                <div class="post_article">
+                                    <p class="post-article">
+                                        March 6, 2020 — Leading a remote design team can be a bit daunting at first.
+                                        Mark
+                                        Boulton shares some
+                                        <a href="" class="color_b">simple principles</a>
+                                        that help you get into the swing of things quickly, so that you can start to
+                                        become
+                                        more productive and effective.
+                                    </p>
                                 </div>
+                            </article>
+                        </div>
+                        <div class="l-community-hightlights dsk5 container_article">
+                            <a href="" class="dsk3">
+                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="" class="rotate">
+                            </a>
+                            <article class="article-post dsk9">
+
                                 <span>
-                                    <a href="">Jason Pamental </a>
-                                    <span>wrote</span>
+                                    <a href="" class="color_g">Jason Pamental </a>
+                                    <span class="color_g">wrote</span>
                                 </span>
-                            </header>
-                            <h1>
-                                <a href="">A Variable Fonts Primer</a>
-                            </h1>
-                            <div>
-                                <p>
-                                    March 5, 2020 — With variable fonts, we can accomplish what used to require several files with a single file and some CSS. The “
+                                <h1 class="article-post">
                                     <a href="">A Variable Fonts Primer</a>
-                                    ” teaches you how variable fonts tick and how they can benefit UI design, accessibility, and long-form reading.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="l-community-hightlights">
-                        <article>
-                            <header>
-                                <div>
-                                    <figure>
-                                        <a href="">
-                                            <div>
-                                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="">
-                                            </div>
-                                        </a>
-                                    </figure>
+                                </h1>
+                                <div class="post_article">
+                                    <p class="post-article">
+                                        March 5, 2020 — With variable fonts, we can accomplish what used to require
+                                        several
+                                        files with a single file and some CSS. The “
+                                        <a href="" class="color_b">A Variable Fonts Primer</a>
+                                        ” teaches you how variable fonts tick and how they can benefit UI design,
+                                        accessibility, and long-form reading.
+                                    </p>
                                 </div>
-                                <span>
-                                    <a href="">Oscar Braunet </a>
-                                    <span>wrote</span>
+                            </article>
+                        </div>
+                        <div class="l-community-hightlights dsk5 container_article">
+                            <a href="" class="dsk3">
+                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="" class="rotate">
+                            </a>
+                            <article class="article-post dsk9">
+                                <span class="">
+                                    <a href="" class="color_g">Oscar Braunet </a>
+                                    <span class="color_g">wrote</span>
                                 </span>
-                            </header>
-                            <h1>
-                                <a href="">Inclusive Inputs</a>
-                            </h1>
-                            <div>
-                                <p>
-                                    March 4, 2020 — To make our sites inclusive and usable for people who rely on assistive technology, we need to get the basics of semantic HTML right. Oscar Braunert’s 
-                                    <a href=""> article on inclusive inputs</a>
-                                     is a great starting point to do so.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="l-community-hightlights">
-                        <article>
-                            <header>
-                                <div>
-                                    <figure>
-                                        <a href="">
-                                            <div>
-                                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="">
-                                            </div>
-                                        </a>
-                                    </figure>
+                                <h1 class="article-post">
+                                    <a href="">Inclusive Inputs</a>
+                                </h1>
+                                <div class="post_article">
+                                    <p class="post-article">
+                                        March 4, 2020 — To make our sites inclusive and usable for people who rely on
+                                        assistive technology, we need to get the basics of semantic HTML right. Oscar
+                                        Braunert’s
+                                        <a href="" class="color_b"> article on inclusive inputs</a>
+                                        is a great starting point to do so.
+                                    </p>
                                 </div>
+                            </article>
+                        </div>
+                        <div class="l-community-hightlights dsk5 container_article">
+                            <a href="" class="dsk3">
+                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="" class="rotate">
+                            </a>
+                            <article class="article-post dsk9">
                                 <span>
-                                    <a href="">Tim Kadlec </a>
-                                    <span>wrote</span>
+                                    <a href="" class="color_g">Tim Kadlec </a>
+                                    <span class="color_g">wrote</span>
                                 </span>
-                            </header>
-                            <h1>
-                                <a href="">When CSS Blocks</a>
-                            </h1>
-                            <div>
-                                <p>
-                                    March 3, 2020 — In his article “
+                                <h1 class="article-post">
                                     <a href="">When CSS Blocks</a>
-                                    ”, Tim Kadlec dives deeper into network priority issues and what you can do to improve performance through a minor change to the way you load CSS and the DOM order.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="l-community-hightlights">
-                        <article>
-                            <header>
-                                <div>
-                                    <figure>
-                                        <a href="">
-                                            <div>
-                                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="">
-                                            </div>
-                                        </a>
-                                    </figure>
+                                </h1>
+                                <div class="post_article">
+                                    <p class="post-article">
+                                        March 3, 2020 — In his article “
+                                        <a href="" class="color_b">When CSS Blocks</a>
+                                        ”, Tim Kadlec dives deeper into network priority issues and what you can do to
+                                        improve performance through a minor change to the way you load CSS and the DOM
+                                        order.
+                                    </p>
                                 </div>
-                                <span>
-                                    <a href="">Marcin Wichary </a>
-                                    <span>wrote</span>
+                            </article>
+                        </div>
+                        <div class="l-community-hightlights dsk5 container_article">
+                            <a href="" class="dsk3">
+                                <img src="https://img.icons8.com/carbon-copy/100/000000/name.png" alt="" class="rotate">
+                            </a>
+                            <article class="article-post dsk9">
+                                <span class="">
+                                    <a href="" class="color_g">Marcin Wichary </a>
+                                    <span class="color_g">wrote</span>
                                 </span>
-                            </header>
-                            <h1>
-                                <a href="">I Pressed ⌘B</a>
-                            </h1>
-                            <div>
-                                <p>
-                                    March 2, 2020 — Marcin Wichary’s talk “
+                                <h1 class="article-post">
                                     <a href="">I Pressed ⌘B</a>
-                                    ” from Figma’s first Config conference is 20 minutes full of new insights on typography, keyboards, weird bugs, and complexities of building anything that deals with fonts.
-                                </p>
-                            </div>
-                        </article>
+                                </h1>
+                                <div class="post_article">
+                                    <p class="post-article">
+                                        March 2, 2020 — Marcin Wichary’s talk “
+                                        <a href="" class="color_b">I Pressed ⌘B</a>
+                                        ” from Figma’s first Config conference is 20 minutes full of new insights on
+                                        typography, keyboards, weird bugs, and complexities of building anything that
+                                        deals
+                                        with fonts.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12">
-                    <div>
-                        <a href="">
+                    <div class="twitter">
+                        <a href="" class="twitter_link">
                             More links on Twitter
                         </a>
                     </div>
@@ -421,165 +447,204 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="design_book">
         <div>
-            <a href="">
-                <div>
-                    <img src="https://res.cloudinary.com/indysigner/image/upload/v1542959380/shop/design-systems-hardcover-book.png" alt="">
-                </div>
-            </a>
-        </div>
-        <div>
-            <div>
+            <div class="design_book_paragraph mb10 dsk10">
                 <span>Featured Smashing Book</span>
-                <h2>
-                    <a href="">Design Systems</a>
+                <h2 class="design_book_title">
+                    <a href="" class="color">Design Systems</a>
                 </h2>
                 <p>
                     Meet
                     <strong>Design Systems</strong>
-                    , a recent Smashing book in which Alla Kholmatova explores how to set up an 
+                    , a recent Smashing book in which Alla Kholmatova explores how to set up an
                     <strong>effective design system</strong>
                     to create great digital products. With common traps, gotchas and lessons learned.
                 </p>
             </div>
-            <a href="">Table of contents</a>
+            <a href="" class="design_book_link">Table of contents</a>
+        </div>
+        <div class="design_book_book mb10">
+            <a href="">
+                <div class="design_book_container">
+                    <img src="https://res.cloudinary.com/indysigner/image/upload/v1542959380/shop/design-systems-hardcover-book.png"
+                        alt="" class="book_design_book rotate">
+                </div>
+            </a>
         </div>
     </section>
-    
-      <section>
-      <h4>
-        <span>Curated Posts</span>
-      </h4>
-      <article>
-        <small>Guides</small>
-        <h2>New Front-End Challenges To Master</h2>
-        <ul>
-          <li><a href="https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/">CSS Grid Layout</a></li>
-          <li><a href="https://www.smashingmagazine.com/taking-pattern-libraries-next-level/">Pattern Library</a></li>
-          <li><a href="https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/">Progressive Web Apps</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/06/guide-switching-http-https/">Switching to HTTPS</a></li>
-          <li><a href="https://www.smashingmagazine.com/2016/02/getting-ready-for-http2/">HTTP/2 Guidelines</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/01/styled-components-enforcing-best-practices-component-based-systems/">React & Vue.js</a></li>
-          <li><a href="https://www.smashingmagazine.com/2018/07/redux-designers-guide/">Redux For Designers</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/08/creating-custom-inputs-vue-js/">Vue Components</a></li>
-          </ul>
-      </article>
-      <article>
-        <small>Guides</small>
-        <h2>Performances Optimization Strategy</h2>
-        <ul>
-          <li><a href="https://www.smashingmagazine.com/2017/10/improving-performance-security/">Quick Performances Wins</a></li>
-          <li><a href="https://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/">Building For Performance</a></li>
-          <li><a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-End Optimization</a></li>
-          <li><a href="https://www.smashingmagazine.com/2016/10/next-generation-server-compression-with-brotli/">Better Compression</a></li>
-          <li><a href="https://www.smashingmagazine.com/2016/09/the-building-blocks-of-progressive-web-apps/">Progressive Web Apps</a></li>
-          <li><a href="https://www.smashingmagazine.com/2015/09/why-performance-matters-the-perception-of-time/">Perceived Performance</a></li>
-        </ul>
-      </article>
-      <article>
-        <small>Guides</small>
-        <h2>Design Patterns & Checklists</h2>
-        <ul>
-          <li><a href="https://www.smashingmagazine.com/2018/06/bringing-personality-back-to-the-web/">Responsive Art Direction</a></li>
-          <li><a href="https://www.smashingmagazine.com/2018/02/designing-a-perfect-responsive-configurator/">Perfect Configurator</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/06/designing-efficient-web-forms/">Perfect Web Form</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/">Perfect Accordion</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/07/designing-perfect-date-time-picker/">Perfect Date Picker</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/07/designing-perfect-slider/">Perfect Slider</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/08/designing-perfect-feature-comparison-table/">Perfect Comparison Table</a></li>
-          <li><a href="https://www.smashingmagazine.com/2016/03/pagination-infinite-scrolling-load-more-buttons/">Perfect Infinite Scroll</a></li>
-          <li><a href="https://www.smashingmagazine.com/2016/07/ten-requirements-for-making-home-page-carousels-work-for-end-users/">Perfect Carousel</a></li>
-          <li><a href="https://www.smashingmagazine.com/2019/04/privacy-concerns-ux-web-forms">Privacy UX</a></li>
-        </ul>
-      </article>
-      <article>
-        <small>Guides</small>
-        <h2>Improving Workflow & Data Protection</h2>
-        <ul>
-          <li><a href="https://www.smashingmagazine.com/2018/02/gdpr-for-web-developers/">GRPD For Developers</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/07/privacy-by-design-framework/">Privacy Framework</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/08/what-to-charge-clients/">Estimating Time</a></li>
-          <li><a href="https://www.smashingmagazine.com/2011/12/how-do-you-deal-with-overstressed-irrational-clients-entrepreneur-view/">Dealing With Irrational Clients</a></li>
-          <li><a href="https://www.smashingmagazine.com/2015/12/getting-back-into-right-deliverables-business/">Getting Deliverables Right</a></li>
-          <li><a href="https://www.smashingmagazine.com/2010/07/passing-the-holy-milestone-how-to-meet-deadlines/">Meeting Deadlines</a></li>
-          <li><a href="https://www.smashingmagazine.com/2017/06/convincing-clients-sign-off/">Convincing Clients</a></li>
-          <li><a href="https://www.smashingmagazine.com/2013/01/guarantee-income-with-agile-billing/">Invoicing Clients</a></li>
-        </ul>
-      </article>
-      <div>
-        <h2><a href="/the-smashing-newsletter/"> Smashing Newsletter</a></h2>
-        <p>Imagine you wrote a beautiful song and nobody discovered it.<br>That would make any cat sad. Don't let that happen !</p>
-        <a href="/the-smashing-newsletter/">
-          <img src="images/download.jpg">
+
+    <section>
+        <h4 class="vertical">
+            <span>Curated Posts</span>
+        </h4>
+        <article class="article_zoom">
+            <small>Guides</small>
+            <h2>New Front-End Challenges To Master</h2>
+            <ul>
+                <li><a
+                        href="https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/">CSS
+                        Grid Layout</a></li>
+                <li><a href="https://www.smashingmagazine.com/taking-pattern-libraries-next-level/">Pattern Library</a>
+                </li>
+                <li><a href="https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/">Progressive
+                        Web Apps</a></li>
+                <li><a href="https://www.smashingmagazine.com/2017/06/guide-switching-http-https/">Switching to
+                        HTTPS</a></li>
+                <li><a href="https://www.smashingmagazine.com/2016/02/getting-ready-for-http2/">HTTP/2 Guidelines</a>
+                </li>
+                <li><a
+                        href="https://www.smashingmagazine.com/2017/01/styled-components-enforcing-best-practices-component-based-systems/">React
+                        & Vue.js</a></li>
+                <li><a href="https://www.smashingmagazine.com/2018/07/redux-designers-guide/">Redux For Designers</a>
+                </li>
+                <li><a href="https://www.smashingmagazine.com/2017/08/creating-custom-inputs-vue-js/">Vue Components</a>
+                </li>
+            </ul>
+        </article>
+        <article class="article_zoom">
+            <small>Guides</small>
+            <h2>Performances Optimization Strategy</h2>
+            <ul>
+                <li><a href="https://www.smashingmagazine.com/2017/10/improving-performance-security/">Quick
+                        Performances Wins</a></li>
+                <li><a href="https://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/">Building For
+                        Performance</a></li>
+                <li><a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-End
+                        Optimization</a></li>
+                <li><a href="https://www.smashingmagazine.com/2016/10/next-generation-server-compression-with-brotli/">Better
+                        Compression</a></li>
+                <li><a href="https://www.smashingmagazine.com/2016/09/the-building-blocks-of-progressive-web-apps/">Progressive
+                        Web Apps</a></li>
+                <li><a href="https://www.smashingmagazine.com/2015/09/why-performance-matters-the-perception-of-time/">Perceived
+                        Performance</a></li>
+            </ul>
+        </article>
+        <article class="article_zoom">
+            <small>Guides</small>
+            <h2>Design Patterns & Checklists</h2>
+            <ul>
+                <li><a href="https://www.smashingmagazine.com/2018/06/bringing-personality-back-to-the-web/">Responsive
+                        Art Direction</a></li>
+                <li><a href="https://www.smashingmagazine.com/2018/02/designing-a-perfect-responsive-configurator/">Perfect
+                        Configurator</a></li>
+                <li><a href="https://www.smashingmagazine.com/2017/06/designing-efficient-web-forms/">Perfect Web
+                        Form</a></li>
+                <li><a href="https://www.smashingmagazine.com/2017/06/designing-perfect-accordion-checklist/">Perfect
+                        Accordion</a></li>
+                <li><a href="https://www.smashingmagazine.com/2017/07/designing-perfect-date-time-picker/">Perfect Date
+                        Picker</a></li>
+                <li><a href="https://www.smashingmagazine.com/2017/07/designing-perfect-slider/">Perfect Slider</a></li>
+                <li><a href="https://www.smashingmagazine.com/2017/08/designing-perfect-feature-comparison-table/">Perfect
+                        Comparison Table</a></li>
+                <li><a href="https://www.smashingmagazine.com/2016/03/pagination-infinite-scrolling-load-more-buttons/">Perfect
+                        Infinite Scroll</a></li>
+                <li><a
+                        href="https://www.smashingmagazine.com/2016/07/ten-requirements-for-making-home-page-carousels-work-for-end-users/">Perfect
+                        Carousel</a></li>
+                <li><a href="https://www.smashingmagazine.com/2019/04/privacy-concerns-ux-web-forms">Privacy UX</a></li>
+            </ul>
+        </article>
+        <article class="article_zoom">
+            <small>Guides</small>
+            <h2>Improving Workflow & Data Protection</h2>
+            <ul>
+                <li><a href="https://www.smashingmagazine.com/2018/02/gdpr-for-web-developers/">GRPD For Developers</a>
+                </li>
+                <li><a href="https://www.smashingmagazine.com/2017/07/privacy-by-design-framework/">Privacy
+                        Framework</a></li>
+                <li><a href="https://www.smashingmagazine.com/2017/08/what-to-charge-clients/">Estimating Time</a></li>
+                <li><a
+                        href="https://www.smashingmagazine.com/2011/12/how-do-you-deal-with-overstressed-irrational-clients-entrepreneur-view/">Dealing
+                        With Irrational Clients</a></li>
+                <li><a href="https://www.smashingmagazine.com/2015/12/getting-back-into-right-deliverables-business/">Getting
+                        Deliverables Right</a></li>
+                <li><a
+                        href="https://www.smashingmagazine.com/2010/07/passing-the-holy-milestone-how-to-meet-deadlines/">Meeting
+                        Deadlines</a></li>
+                <li><a href="https://www.smashingmagazine.com/2017/06/convincing-clients-sign-off/">Convincing
+                        Clients</a></li>
+                <li><a href="https://www.smashingmagazine.com/2013/01/guarantee-income-with-agile-billing/">Invoicing
+                        Clients</a></li>
+            </ul>
+        </article class="article_zoom">
+        <div class="smashing_newsletter">
+            <h2><a href="/the-smashing-newsletter/"> Smashing Newsletter</a></h2>
+            <p>Imagine you wrote a beautiful song and nobody discovered it.<br>That would make any cat sad. Don't let
+                that happen !</p>
+            <a href="/the-smashing-newsletter/">
+                <img src="images/cat-with-trampet.svg" class="image_chat_trompette">
+            </a>
+            <input type="e-mail" name="e-mail"></br>
+            <small>
+                <a href="/the-smashing-newsletter/">Useful tips for web designers.</a>
+                "Sent 2x a month."
+                <br>
+                "You can unsubcribe any time -"
+                <em>obviously</em>
+                "."
+            </small>
+        </div>
+        <a href="/articles/" class="see_all_article">
+            "See All Articles"
         </a>
-        <input type="e-mail" name="e-mail">	
-        <small>
-          <a href="/the-smashing-newsletter/">Useful tips for web designers.</a>
-          "Sent 2x a month."
-          <br>
-          "You can unsubcribe any time -"
-          <em>obviously</em>
-          "."
-        </small>
-      </div>
-      <a href="/articles/">
-        "See All Articles"
-      </a>
     </section>
     <footer>
-      <h4>Browse All Smashing Magazine Topics</h4>
-      <ul>
-          <li><a href="Accessibility">Accessibility</a></li>
-          <li><a href="Android">Android</a></li>
-          <li><a href="Animation">Animation</a></li>
-          <li><a href="Apps">Apps</a></li>
-          <li><a href="CSS">CSS</a></li>
-          <li><a href="Design">Design</a></li>
-          <li><a href="Design Patterns">Design Patterns</a></li>
-          <li><a href="Design Systems">Design Systems</a></li>
-          <li><a href="E-Commerce">E-Commerce</a></li>
-          <li><a href="Freebies">Freebies</a></li>
-          <li><a href="Graphics">Graphics</a></li>
-          <li><a href="HTML">HTML</a></li>
-          <li><a href="Illustrator">Illustrator</a></li>
-          <li><a href="Inspiration">Inspiration</a></li>
-          <li><a href="iOS">iOS</a></li>
-          <li><a href="Javascript">Javascript</a></li>
-          <li><a href="Mobile">Mobile</a></li>
-          <li><a href="Pattern Libraries">Pattern Libraries</a></li>
-          <li><a href="Performance">Performance</a></li>
-          <li><a href="Photoshop">Photoshop</a></li>
-          <li><a href="Plugins">Plugins</a></li>
-          <li><a href="React">React</a></li>
-          <li><a href="Responsive Web Design">Responsive Web Design</a></li>
-          <li><a href="Service Workers">Service Workers</a></li>
-          <li><a href="Sketch">Sketch</a></li>
-          <li><a href="Typography">Typography</a></li>
-          <li><a href="UI">UI</a></li>
-          <li><a href="Usability">Usability</a></li>
-          <li><a href="User Experience">User Experience</a></li>
-          <li><a href="Wallpapers">Wallpapers</a></li>
-          <li><a href="Web Design">Web Design</a></li>
-          <li><a href="Word Press">Word Press</a></li>
-          <li><a href="Wordflow">Wordflow</a></li>
+        <h4 class="footer_topics_title">Browse All Smashing Magazine Topics</h4>
+        <ul class="topics_bottom">
+            <li><a href="Accessibility" class="text_wtvdr">Accessibility</a></li>
+            <li ><a href="Android" class="text_wtvdr">Android</a></li>
+            <li ><a href="Animation" class="text_wtvdr">Animation</a></li>
+            <li ><a href="Apps" class="text_wtvdr">Apps</a></li>
+            <li ><a href="CSS" class="text_wtvdr">CSS</a></li>
+            <li ><a href="Design" class="text_wtvdr">Design</a></li>
+            <li ><a href="Design Patterns" class="text_wtvdr">Design Patterns</a></li>
+            <li ><a href="Design Systems" class="text_wtvdr">Design Systems</a></li>
+            <li ><a href="E-Commerce" class="text_wtvdr">E-Commerce</a></li>
+            <li ><a href="Freebies" class="text_wtvdr">Freebies</a></li>
+            <li ><a href="Graphics" class="text_wtvdr">Graphics</a></li>
+            <li ><a href="HTML" class="text_wtvdr">HTML</a></li>
+            <li ><a href="Illustrator" class="text_wtvdr">Illustrator</a></li>
+            <li ><a href="Inspiration" class="text_wtvdr">Inspiration</a></li>
+            <li ><a href="iOS" class="text_wtvdr">iOS</a></li>
+            <li ><a href="Javascript" class="text_wtvdr">Javascript</a></li>
+            <li ><a href="Mobile" class="text_wtvdr">Mobile</a></li>
+            <li ><a href="Pattern Libraries" class="text_wtvdr">Pattern Libraries</a></li>
+            <li ><a href="Performance" class="text_wtvdr">Performance</a></li>
+            <li ><a href="Photoshop" class="text_wtvdr">Photoshop</a></li>
+            <li ><a href="Plugins" class="text_wtvdr">Plugins</a></li>
+            <li ><a href="React" class="text_wtvdr">React</a></li>
+            <li ><a href="Responsive Web Design" class="text_wtvdr">Responsive Web Design</a></li>
+            <li ><a href="Service Workers" class="text_wtvdr">Service Workers</a></li>
+            <li ><a href="Sketch" class="text_wtvdr">Sketch</a></li>
+            <li ><a href="Typography" class="text_wtvdr">Typography</a></li>
+            <li ><a href="UI" class="text_wtvdr">UI</a></li>
+            <li ><a href="Usability" class="text_wtvdr">Usability</a></li>
+            <li ><a href="User Experience" class="text_wtvdr">User Experience</a></li>
+            <li ><a href="Wallpapers" class="text_wtvdr">Wallpapers</a></li>
+            <li ><a href="Web Design" class="text_wtvdr">Web Design</a></li>
+            <li ><a href="Word Press" class="text_wtvdr">Word Press</a></li>
+            <li ><a href="Wordflow" class="text_wtvdr">Wordflow</a></li>
         </ul>
-        <p>With a commitment to quality content for the design community</p>
-        <p>Founded b Vitaly Friedman and Sven Lennarts. 2006-2020.</p>
-        <p>Smashing is proudly running on <a href="https://www.netlify.com/">Netfily.</a></p>
-        <p>Fonts by <a href="https://latinotype.com/">Latinotype.</a></p>
-        <ul>
-          <li><a href="/write-for-us/">Write for us</a></li>
-          <li><a href="/contact/">Contact us</a></li>
-          <li><a href="/about/">About us (Impressum)</a></li>
-          <li><a href="/privacy-policy">Privacy policy</a></li>
-          <li><a href="/auth/">Membership login</a></li>
-          <li><a href="/delivery-times/">Delivery times</a></li>
-          <li><a href="mailto:advertising@smashingmagazine.com?subject=Let%E2%80%99s%20talk%20about%20advertising">Advertise</a></li>
+        <p class="credits">With a commitment to quality content for the design community</p>
+        <p class="credits">Founded b Vitaly Friedman and Sven Lennarts. 2006-2020.</p>
+        <p class="credits">Smashing is proudly running on <a href="https://www.netlify.com/" class="underline_">Netfily.</a></p>
+        <p class="credits">Fonts by <a href="https://latinotype.com/" class="underline_">Latinotype.</a></p>
+        <ul class="footer">
+            <li><a href="/write-for-us/">Write for us</a></li>
+            <li><a href="/contact/">Contact us</a></li>
+            <li><a href="/about/">About us (Impressum)</a></li>
+            <li><a href="/privacy-policy">Privacy policy</a></li>
+            <li><a href="/auth/">Membership login</a></li>
+            <li><a href="/delivery-times/">Delivery times</a></li>
+            <li><a
+                    href="mailto:advertising@smashingmagazine.com?subject=Let%E2%80%99s%20talk%20about%20advertising">Advertise</a>
+            </li>
         </ul>
         <a href='#top' data-scroll="#top" title="Back to top">
-        <img src="images/back-to-top-arrow.png" alt="back-to-top-arrow"/>
+            <img class="retour_en_haut rotate opacity_top" src="images/back-to-top-arrow.png" alt="back-to-top-arrow"/>
     </footer>
 
-  </body>
+</body>
+
 </html>
