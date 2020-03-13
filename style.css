@@ -15,13 +15,13 @@ header{
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
 }
+
 .white_label{
     background-color: white;
     z-index: 10;
     padding: 5px;
     box-shadow: 7px 7px rgba(3, 3, 3, 0.3);
 }
-
 
 .main_title{
     text-align: center;
@@ -148,6 +148,9 @@ header a:visited {
     background-color: transparent;
     border: none;
     font-size: 3em;
+    position: fixed;
+    bottom: 10%;
+    left: 0px;
 }
 
 .latest_articles_container{
@@ -156,6 +159,7 @@ header a:visited {
     grid-template-rows: 1fr 1fr 1fr;
     width: 100%;
     background-color: #f6f3f2;
+    margin-left: 3%;
 }
 
 .smashing_members {
