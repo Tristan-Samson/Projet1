@@ -114,6 +114,16 @@ header a:visited {
     text-decoration: none;
 }
 
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: white;
+    text-decoration: none;
+}
+
 .grid_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
