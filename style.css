@@ -492,7 +492,7 @@ p {
 .current_events{
     padding: 2% 5%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 60px;
 }
 
@@ -783,6 +783,12 @@ p {
         box-shadow: 7px 7px 7px 7px rgba(3, 3, 3, 0.5);
     }
     
+    .current_events{
+        padding: 2% 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 60px;
+    }
 }
 
 
@@ -793,6 +799,10 @@ p {
         grid-template-columns: 100%;
         width: 100%;
         color: white;
+    }
+
+    .header_icon {
+        display: none;
     }
 
     .latest_articles_container{
@@ -811,5 +821,22 @@ p {
         z-index: 1;
         box-shadow: 7px 7px 7px 7px rgba(3, 3, 3, 0.5);
     }
+
+    .current_events{
+        padding: 2% 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 60px;
+    }
+
+    .list_header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+
+    }
     
+    .list_header p{
+        display: none;
+    }
 }
