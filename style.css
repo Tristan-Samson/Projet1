@@ -196,7 +196,7 @@ header a:visited {
 }
 
 /*-----COMMUNITY LINK-----*/
-
+@media screen and (min-width: 993px) {
 .vertical {
     display: block;
     text-align: right;
@@ -210,8 +210,8 @@ header a:visited {
     font-size: 0.7em;
     line-height: 1;
     font-variant: small-caps;
+    }
 }
-
 /*-----PERSON OF THE WEEK-----*/
 
 .bio-image-link {
@@ -231,8 +231,8 @@ header a:visited {
 
 .potw_p {
     padding-top: 30px;
+    padding-left: 50px;
 }
-
 /*-----ARTICLE COMMUNITY-----*/
 
 .l-community-higtlights {
@@ -289,6 +289,7 @@ p {
 .container_article {
     display: flex;
     flex-direction: row;
+    margin-top: 40px;
 }
 
 .color_b {
@@ -356,10 +357,44 @@ p {
 }
 
 
-
-
-
-
+@media screen and (min-width: 993px) {
+    .dsk0{display: none;}
+    .dsk1{width: 8.33%;}
+    .dsk2{width: 16.66%;}
+    .dsk3{width: 25%;}
+    .dsk4{width: 33.33%;}
+    .dsk5{width: 41.66%;}
+    .dsk6{width: 50%;}
+    .dsk7{width: 58.33%;}
+    .dsk8{width: 61.33%;}
+    .dsk9{width: 75%;}
+    .dsk10{width: 83.33%;}
+    .dsk11{width: 91.66%;}
+    .dsk12{width: 100%;}
+}
+@media screen and (max-width: 769px) {
+    .mb0{display: none;}
+    .mb1{width: 8.33%;}
+    .mb2{width: 16.66%;}
+    .mb3{width: 25%;}
+    .mb4{width: 33.33%;}
+    .mb5{width: 41.66%;}
+    .mb6{width: 50%;}
+    .mb7{width: 58.33%;}
+    .mb8{width: 61.33%;}
+    .mb9{width: 75%;}
+    .mb10{width: 83.33%;}
+    .mb11{width: 91.66%;}
+    .mb12{width: 100%;}
+    .design_book {
+        background-color: #d33a2c;
+        padding: 5%;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    
+}
 
 
 
@@ -694,3 +729,42 @@ p {
     transition-duration: 0.2s;
     z-index: -1;
 }
+
+#hidden_cat{
+    display: inline;
+    float: left;
+    height: 10%;
+    width: 10%;
+}
+
+@media screen and (min-width: 992px) {
+    #hidden_cat{
+        display: none;
+    }
+}
+
+.single_article{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.bio_article{
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+#article_title{
+    grid-column: span 2;
+}
+
+#hidden_cat{
+    display: inline;
+    float: left;
+    width: 30%;
+    height: 6em;
+}
+
+@media screen and (min-width: 992px) {
+    #hidden_cat{
+        display: none;
+    }
